@@ -17,6 +17,11 @@ const rowElement = document.querySelector(".row"); //object | null
 
 for (let i = 0; i < 100; ++i) {
 
+    const divElement = document.createElement("div"); //object
+
+    divElement.classList.add("col");
+    divElement.classList.add("num");
+
     //2. creare nuova variabile num con indice + 1 per arrivare a 100.
     let num = i + 1; //number
     //console.log(num);
@@ -37,6 +42,8 @@ for (let i = 0; i < 100; ++i) {
     if (restThree === 0 && restFive != 0) {
         num = "Fizz"; //string
         console.log(num);
+
+        divElement.classList.add("background-pink");
     }
 
     //6. ALTRIMENTI SE restoCinque === 0 e restoTre è diverso (!=) da 0
@@ -45,6 +52,8 @@ for (let i = 0; i < 100; ++i) {
     else if (restFive === 0 && restThree != 0) {
         num = "Buzz"; //string
         console.log(num); //string
+
+        divElement.classList.add("background-red");
     }
 
     //7. ALTRIMENTI SE restoTre E (&&) restoCinque === 0
@@ -53,9 +62,13 @@ for (let i = 0; i < 100; ++i) {
     else if (restThree === 0 && restFive === 0) {
         num = "FizzBuzz"; //string
         console.log(num); //string
+
+        divElement.classList.add("background-blue");
     }
     //8. ALTRIMENTI stampare num in console.
     else console.log(num); //string
+    
+    divElement.classList.add("background-light-blue");
 
     //USANDO IL METODO innerHTML CON STRINGA (in questo caso non lo utilizzo):
 
@@ -69,11 +82,10 @@ for (let i = 0; i < 100; ++i) {
     //USANDO IL METODO append CON ELEMENTO:
 
     //10b. dichiara costante div come elemento
-
-    const divElement = document.createElement("div"); //object
+        //(vedi sopra)
 
     //10.5 dai all'elemento div la classe .col
-    divElement.classList.add("col");
+        //(vedi sopra)
 
     //11.b usando innerHTML, aggiungi nell'elemento div la variabile num
     divElement.innerHTML = num;

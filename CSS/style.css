@@ -1,0 +1,25 @@
+
+
+.num {
+    height: 200px;
+    border: 1px solid black;
+    font-size: 50px;
+    text-align: center;
+    line-height: 200px;
+}
+
+.background-light-blue {
+    background-color: rgb(124, 124, 240);
+}
+
+.background-pink {
+    background-color: rgb(240, 124, 184);
+}
+
+.background-red {
+    background-color: rgb(207, 51, 95);
+}
+
+.background-blue {
+    background-color: rgb(63, 63, 177);
+}
