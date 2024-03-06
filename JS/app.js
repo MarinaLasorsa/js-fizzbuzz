@@ -7,26 +7,46 @@ Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz” al posto 
 //1. scrivere funzione che parta da un indice di valore 0 
 //  e che incrementi di 1 il suo valore se minore di 100.
 
+for (let i = 0; i < 100; ++i) {
+
 //2. creare nuova variabile num con indice + 1 per arrivare a 100.
+let num = i + 1;
+//console.log(num);
 
 //3. verifica se num è multiplo di 3:
 //  crea variabile restoTre da num % 3. Se resto === 0 allora è multiplo di 3
+let restThree = num % 3;
+//console.log(restThree);
 
 //4. verifica se num è multiplo di 5:
 //  crea variabile restoCinque da num % 5. Se resto === 0 allora è multiplo di 5.
+let restFive = num % 5;
+//console.log(restFive);
 
 //5. SE restoTre === 0 e restoCinque è diverso (!=) da 0
 //  allora num = "Fizz"
 //  stampare num in console
+if (restThree === 0 && restFive != 0) {
+    num = "Fizz";
+    console.log(num);
+}
 
 //6. ALTRIMENTI SE restoCinque === 0 e restoTre è diverso (!=) da 0
 //  allora num = "Buzz"
 //  stampare num in console
+else if (restFive === 0 && restThree != 0) {
+    num = "Buzz";
+    console.log(num);
+}
 
 //7. ALTRIMENTI SE restoTre E (&&) restoCinque === 0
 //  allora num = "FizzBuzz"
 //  stampare num in console
-
+else if (restThree === 0 && restFive === 0) {
+    num = "FizzBuzz";
+    console.log(num);
+}
 //8. ALTRIMENTI stampare num in console.
+else console.log(num);
 
-
+}
