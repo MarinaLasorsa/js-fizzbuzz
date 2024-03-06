@@ -4,6 +4,16 @@ per i multipli di 3 stampi “Fizz” al posto del numero e
 per i multipli di 5 stampi “Buzz” al post del numero.
 Per i numeri che sono sia multipli di 3 che di 5 stampi “FizzBuzz” al posto del numero.*/
 
+/*Crea un container nel DOM,
+aggiungendo un elemento html con il numero o la stringa corretta da mostrare.*/
+
+//USANDO IL METODO innerHTML (in questo caso non lo utilizzo):
+
+//9. dichiara elemento container nel DOM selezionandolo per classe (querySelector)
+const rowElement = document.querySelector(".row");
+//console.log(rowElement);
+
+
 //1. scrivere funzione che parta da un indice di valore 0 
 //  e che incrementi di 1 il suo valore se minore di 100.
 
@@ -49,4 +59,11 @@ else if (restThree === 0 && restFive === 0) {
 //8. ALTRIMENTI stampare num in console.
 else console.log(num);
 
+//10. dichiara costante div come stringa che contiene num
+const divString = `<div>${num}</div>`;
+
+//11. usando innerHTML, aggiungi dentro all'elemento container la costante div
+rowElement.innerHTML += divString;
 }
+
+
